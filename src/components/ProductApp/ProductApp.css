@@ -1,0 +1,160 @@
+.product-app-section {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #11336f;
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  margin-left: 0%;
+  margin-right: 0%;
+  min-height: 300px;
+  flex-wrap: wrap;
+}
+
+.des {
+  color: #e0e6ed;
+  margin-bottom: 20px;
+}
+
+.product-app-left {
+  flex: 1;
+  max-width: 500px;
+  margin-left: 5%;
+}
+
+.product-app-left .small-heading {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: #fefefe;
+  text-align: center;
+}
+
+.product-app-left .main-heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: rgb(251, 187, 187);
+}
+
+.product-app-left .sub-heading {
+  font-size: 18px;
+  font-weight: 500;
+  color: #f3c0c0;
+  margin-bottom: 20px;
+}
+
+.product-app-left .description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e0e6ed;
+  margin-bottom: 25px;
+}
+
+.store-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.store-buttons img {
+  height: 40px;
+  cursor: pointer;
+}
+
+.product-app-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-app-right img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.mobile-img.one {
+  transform: rotate(-5deg);
+}
+
+.mobile-img.two {
+  transform: rotate(5deg);
+}
+
+
+.store-buttons:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 992px) {
+  .product-app-left {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .product-app-section {
+    flex-direction: column;
+    padding: 30px 25px;
+  }
+
+  .product-app-right {
+    margin-top: 30px;
+  }
+
+  .product-app-left .main-heading {
+    font-size: 24px;
+  }
+
+  .product-app-left .sub-heading {
+    font-size: 16px;
+  }
+
+  .product-app-left .description {
+    font-size: 13px;
+  }
+
+  .store-buttons {
+    justify-content: center;
+  }
+
+  .product-app-right img {
+    max-width: 80%;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-app-left .main-heading {
+    font-size: 20px;
+  }
+
+  .product-app-left .sub-heading {
+    font-size: 15px;
+  }
+
+  .store-buttons img {
+    height: 32px;
+  }
+
+  .product-app-right img {
+    max-width: 100%;
+  }
+
+  .product-app-section {
+    padding: 25px 15px;
+  }
+
+  .product-app-left .description {
+    font-size: 12.5px;
+  }
+}

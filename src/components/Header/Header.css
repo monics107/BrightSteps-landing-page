@@ -1,0 +1,104 @@
+.header{
+height: 36vw;
+width: 97vW;
+margin-left: 0;
+margin-right: 20px;
+margin-top: 20px;
+background: url('/header_img.png') no-repeat;
+background-size: cover;
+background-position: center;
+padding: 0px 40px 40px 0px;
+position: relative;
+
+}
+
+.header-contents{
+position: absolute;
+display: flex;
+flex-direction: column;
+align-items: start;
+gap: 3vw;
+max-width: 40%;
+bottom: 36%;
+left:4vw;
+animation: fadeIn 3s;
+}
+
+.header-contents h2{
+font-weight: 700;
+color: rgb(19, 1, 71);
+font-size: max(2.5vw);
+}
+
+.header-contents p{
+font-weight: 400;
+color: black;
+font-size: 1.5vw;
+}
+
+.button-group{
+display: flex;
+gap: 15px;
+margin-top:20px;
+}
+
+.btn{
+padding: 10px 20px;
+font-size: large;
+font-weight: 500;
+cursor: pointer;
+border-radius: 30px;
+}
+
+.btn-pr{
+background: linear-gradient(to right, #8e2de2, #4a00e0);
+color: #fff;
+padding: 10px 24px;
+border: none;
+border-radius: 30px;
+font-size: 16px;
+font-weight: 600;
+cursor: pointer;
+transition: background 0.3s ease;
+}
+
+.btn-se{
+background-color:transparent;
+font-size: 16px;
+font-weight: 600;
+color: blueviolet;
+border: 3.5px solid blueviolet;
+padding: 10px 24px;
+border-radius: 30px;
+cursor: pointer;
+}
+
+.btn-pr:hover{
+background: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+
+
+@media(max-width: 950px) {
+  .navbar-links {
+    display: none;
+  }
+}
+@media(max-width: 875px) {
+  .button-group {
+    display: none; 
+  }
+
+  .header-contents button {
+    padding: 6px 12px;  
+    font-size: 14px;
+  }
+
+  .header-contents h2 {
+    font-size: 3vw; 
+  }
+
+  .header-contents p {
+    font-size: 1.4vw; 
+  }
+}

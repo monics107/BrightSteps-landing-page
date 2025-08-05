@@ -1,0 +1,168 @@
+.middle-wrapper {
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #2d2d2d;
+  background-color: #fefefe;
+  width: 80%;
+  margin: auto;
+}
+
+.small-title {
+  text-align: center;
+  color: #2e0056;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.main-title {
+  color: #9900ff;
+  font-size: 28px;
+  margin: 10px 0;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.main-title span,
+.highlight-title {
+  color: #9900ff;
+}
+
+.section-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.section-image {
+  width: 300px;
+  border-radius: 15px;
+}
+
+.section-text {
+  text-align: left;
+  min-width: 300px;
+  max-width: 600px;
+  padding-bottom: 50px;
+}
+
+.section-text h3 {
+  font-size: 20px;
+  margin-bottom: 0px;
+  color: #333;
+}
+
+.section-text p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.explore-btn {
+  margin-top: 15px;
+  background: #7f4fd4;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.store-buttons img {
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.store-buttons img:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+} 
+
+h4 {
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.highlight-title {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.store-buttons img:focus {
+  outline: none;
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+
+@media (max-width: 992px) {
+  .section-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-text {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  .section-image {
+    width: 80%;
+    max-width: 350px;
+  }
+
+  .main-title {
+    font-size: 24px;
+  }
+
+  .small-title {
+    font-size: 20px;
+  }
+
+  .section-text h3 {
+    font-size: 18px;
+  }
+
+  .section-text p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-title {
+    font-size: 20px;
+  }
+
+  .small-title {
+    font-size: 18px;
+  }
+
+  .section-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .explore-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  .section-content {
+    gap: 20px;
+  }
+}

@@ -1,0 +1,137 @@
+.trusted-container {
+  margin-top: 0px;
+  text-align: center;
+  padding: 0px 0px;
+  background-color: #fff;
+}
+
+.trusted-heading {
+  margin: 40px 0 20px;
+  font-size: 24px;
+}
+
+.trusted-heading span {
+  color: #8a2be2;
+  font-weight: bold;
+}
+
+/* Logo section */
+.logos {
+  overflow: hidden;
+  position: relative;
+  height: 150px;
+  margin-bottom: 30px;
+}
+
+/* Inner wrapper that scrolls the logos */
+.logos-inner {
+  display: flex;
+  gap: 30px;
+  animation: scroll-logos 20s linear infinite;
+}
+
+.logos-inner img {
+  height: 150px;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+/* Animation to move logos left to right */
+@keyframes scroll-logos {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-60%);
+  }
+}
+
+
+/* Stats grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+}
+
+.stat-card {
+  background-color: #fef6f9;
+  border-radius: 10px;
+  padding: 20px 10px;
+  width: 100%;
+  max-width: 220px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card img {
+  width: 50px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.stat-card h3 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.stat-card p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+@media (max-width: 992px) {
+  .stat-card {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .logos-inner img {
+    height: 70px;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trusted-heading {
+    font-size: 20px;
+  }
+
+  .stat-card h3 {
+    font-size: 16px;
+  }
+
+  .stat-card p {
+    font-size: 13px;
+  }
+
+  .logos-inner img {
+    height: 60px;
+  }
+}

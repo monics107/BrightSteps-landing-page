@@ -1,0 +1,143 @@
+.bright-section {
+  background-color: #203a66;
+  padding: 40px 20px;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 10px;
+  max-width: 1350px;
+  margin: 40px auto;
+  height: max-content;
+  
+}
+
+.heading-main {
+  color: #fdc5bd;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.heading-sub {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.bright-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 70px;
+  gap: 30px;
+  align-items: center;
+}
+
+.bright-text{
+  margin-left: 80px;
+}
+
+@media (min-width: 768px) {
+  .bright-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 0;
+  }
+}
+
+.bright-text {
+  flex: 1;
+  text-align: left;
+}
+
+.we-have {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.success-heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f9dbd4;
+  margin-bottom: 16px;
+}
+
+.des {
+  font-weight: 400;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.get-started-btn {
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  color: #fff;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.get-started-btn:hover {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+.bright-image {
+  flex: 1;
+  text-align: center;
+}
+
+.bright-image img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+
+@media (max-width: 992px) {
+  .bright-content {
+    margin-left: 0;
+    gap: 40px;
+  }
+
+  .bright-text {
+    text-align: center;
+  }
+
+  .get-started-btn {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .heading-main {
+    font-size: 22px;
+  }
+
+  .heading-sub {
+    font-size: 16px;
+  }
+
+  .success-heading {
+    font-size: 20px;
+  }
+
+  .des {
+    font-size: 14px;
+  }
+
+  .bright-image img {
+    max-width: 90%;
+  }
+
+  .get-started-btn {
+    width: 100%;
+    max-width: 220px;
+  }
+}

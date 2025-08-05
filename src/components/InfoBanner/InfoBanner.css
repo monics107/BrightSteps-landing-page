@@ -1,0 +1,111 @@
+.banner-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #11336f;
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  margin-left: 6%;
+  margin-right: 6%;
+  min-height: 300px;
+  flex-wrap: wrap;
+}
+
+.banner-left {
+  width: 60%;
+  margin-left: 20px;
+}
+
+.banner-title {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.banner-title span {
+  color: white;
+  font-weight: bold;
+}
+
+.banner-title strong {
+  color: #ffbcbc;
+}
+
+.banner-text {
+  font-size: 20px;
+  max-width: 90%;
+}
+
+.banner-right {
+  width: 50%;
+  position: absolute;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-images {
+  width: 140px;
+  height: auto;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.card-images img {
+  width: 400px;
+  height: 300px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+
+
+
+@media (max-width: 992px) {
+  .banner-wrapper {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+    min-height: auto;
+  }
+
+  .banner-left {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .banner-text {
+    font-size: 18px;
+    max-width: 100%;
+  }
+
+  .banner-right {
+    position: static;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .card-images img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner-title {
+    font-size: 20px;
+  }
+
+  .banner-text {
+    font-size: 16px;
+  }
+
+  .card-images img {
+    max-width: 90%;
+  }
+}
