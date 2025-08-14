@@ -1,7 +1,9 @@
+
 .testimonials-section {
+  width: 100%;
   text-align: center;
   padding: 60px 20px;
-  background: linear-gradient(to right, #fef4f8, #fdfae9); /* Keep original background */
+  background: linear-gradient(to right, #fef4f8, #fdfae9);
   border-radius: 30px;
   margin: 40px 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -28,10 +30,14 @@
 }
 
 .live-img {
-  width: 300px;
+  width: 100%;
+  max-width: 500px; /* Adjust this value to your preferred maximum width */
+  height: auto;
   border-radius: 20px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  aspect-ratio: 16/9; /* Maintains video proportions */
+  margin: 0 auto; /* Centers the video */
 }
 .live-img:hover {
   transform: scale(1.03);
@@ -54,14 +60,6 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-
-@media (min-width: 768px) {
-  .testimonial-cards {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
 }
 
 .testimonial-card {
@@ -113,50 +111,144 @@
   line-height: 1.6;
   font-weight: 500;
 }
+.player {
+  width: 100%;
+  max-width: 500px; /* Same as above for consistency */
+  margin: 0 auto;
+  aspect-ratio: 16/9;
+}
 
-/* Responsive Tweaks */
-@media (max-width: 768px) {
-  .main-heading {
-    font-size: 22px;
+/* ===== ENHANCED RESPONSIVE STYLES ===== */
+/* Large Desktops (1440px and up) */
+@media (min-width: 1440px) {
+  .testimonials-section {
+    padding: 80px 40px;
   }
-
-  .experience-text {
-    font-size: 18px;
+  .testimonial-cards {
+    max-width: 1200px;
+    margin: 0 auto;
   }
-
-  .live-img {
-    width: 80%;
-    max-width: 250px;
+  .testimonial-card {
+    max-width: 300px;
   }
 }
 
-@media (max-width: 480px) {
+/* Standard Laptops (1024px to 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .testimonial-cards {
+    gap: 25px;
+  }
+  .testimonial-card {
+    max-width: 260px;
+    padding: 28px;
+  }
+}
+
+/* Tablets (768px to 1023px) */
+@media (min-width: 768px) {
+  .testimonial-cards {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* Tablets Landscape (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .testimonials-section {
+    padding: 50px 30px;
+  }
+  .testimonial-cards {
+    gap: 20px;
+  }
+  .testimonial-card {
+    max-width: 240px;
+    padding: 20px;
+  }
+  .live-img {
+    width: 65%;
+  }
+}
+
+/* Tablets Portrait (600px to 767px) */
+@media (min-width: 600px) and (max-width: 767px) {
+  .testimonials-section {
+    padding: 50px 25px;
+    border-radius: 25px;
+  }
+  .testimonial-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .testimonial-card {
+    max-width: calc(50% - 15px);
+    margin-bottom: 20px;
+  }
+  .main-heading {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+}
+
+/* Large Phones (425px to 599px) */
+@media (min-width: 425px) and (max-width: 599px) {
+  .testimonials-section {
+    padding: 45px 20px;
+    border-radius: 20px;
+    margin: 30px 0;
+  }
+  .testimonial-card {
+    max-width: 100%;
+    padding: 22px;
+  }
+  .live-img {
+    width: 75%;
+  }
+}
+
+/* Small Phones (320px to 424px) */
+@media (max-width: 424px) {
   .testimonials-section {
     padding: 40px 15px;
+    border-radius: 18px;
   }
-
   .main-heading {
-    font-size: 18px;
+    font-size: 20px;
+    margin-bottom: 25px;
   }
-
   .experience-text {
-    font-size: 16px;
+    font-size: 17px;
   }
-
-  .testimonial-text {
-    font-size: 13px;
-  }
-
   .testimonial-card {
     padding: 18px;
   }
-
   .card-header {
-    gap: 10px;
+    gap: 8px;
   }
+  .profile-pic {
+    width: 38px;
+    height: 38px;
+  }
+  .name {
+    font-size: 14px;
+  }
+  .role {
+    font-size: 12px;
+  }
+  .testimonial-text {
+    font-size: 13px;
+  }
+}
 
+/* Extra Small Phones (below 320px) */
+@media (max-width: 319px) {
+  .testimonials-section {
+    padding: 35px 12px;
+  }
   .live-img {
-    width: 100%;
-    max-width: 220px;
+    width: 50%;
+  }
+  .testimonial-card {
+    padding: 15px;
   }
 }

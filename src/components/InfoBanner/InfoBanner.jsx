@@ -19,7 +19,7 @@ const InfoBanner = () => {
       {/* Right Section */}
       <div className="banner-right">
           <div className="card-images">
-            <img src="/infobanner.png" alt=" " />
+            <img src={`${import.meta.env.BASE_URL}infobanner.png`} alt=" " />
           </div>
         </div>
       </div>

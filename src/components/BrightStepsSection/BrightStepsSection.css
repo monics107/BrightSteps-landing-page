@@ -7,7 +7,6 @@
   max-width: 1350px;
   margin: 40px auto;
   height: max-content;
-  
 }
 
 .heading-main {
@@ -26,27 +25,12 @@
 .bright-content {
   display: flex;
   flex-direction: column;
-  margin-left: 70px;
   gap: 30px;
   align-items: center;
 }
 
-.bright-text{
-  margin-left: 80px;
-}
-
-@media (min-width: 768px) {
-  .bright-content {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-left: 0;
-  }
-}
-
 .bright-text {
-  flex: 1;
-  text-align: left;
+  text-align: center;
 }
 
 .we-have {
@@ -72,56 +56,81 @@
 .get-started-btn {
   background: linear-gradient(to right, #8e2de2, #4a00e0);
   color: #fff;
-  padding: 10px 24px;
+  padding: 12px 28px;
   border: none;
   border-radius: 30px;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .get-started-btn:hover {
   background: linear-gradient(to right, #6a11cb, #2575fc);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .bright-image {
-  flex: 1;
-  text-align: center;
+  width: 100%;
 }
 
 .bright-image img {
   width: 100%;
-  max-width: 380px;
+  max-width: 450px; /* Increased from 380px */
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-
-
-@media (max-width: 992px) {
+/* Medium Screens (768px-992px) - Enhanced Layout */
+@media (min-width: 768px) {
   .bright-content {
-    margin-left: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     gap: 40px;
   }
 
   .bright-text {
+    text-align: left;
+    flex: 1;
+    padding-right: 20px;
+  }
+
+  .bright-image {
+    flex: 1;
     text-align: center;
   }
 
-  .get-started-btn {
-    padding: 10px 20px;
-    font-size: 15px;
+  .bright-image img {
+    max-width: 420px; /* Slightly larger for tablets */
   }
 }
 
-@media (max-width: 576px) {
+/* Large Tablets (900px-1200px) */
+@media (min-width: 900px) and (max-width: 1200px) {
+  .bright-image img {
+    max-width: 480px; /* Even larger for this range */
+  }
+}
+
+/* Small Screens (576px-767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .bright-image img {
+    max-width: 380px;
+  }
+}
+
+/* Mobile (below 576px) */
+@media (max-width: 575px) {
   .heading-main {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .heading-sub {
     font-size: 16px;
+    margin-bottom: 20px;
   }
 
   .success-heading {
@@ -129,15 +138,30 @@
   }
 
   .des {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .bright-image img {
-    max-width: 90%;
+    max-width: 320px;
   }
 
   .get-started-btn {
-    width: 100%;
-    max-width: 220px;
+    padding: 10px 24px;
+    font-size: 15px;
+  }
+}
+
+/* Extra Small Screens (below 400px) */
+@media (max-width: 399px) {
+  .bright-section {
+    padding: 30px 15px;
+  }
+
+  .heading-main {
+    font-size: 22px;
+  }
+
+  .bright-image img {
+    max-width: 280px;
   }
 }

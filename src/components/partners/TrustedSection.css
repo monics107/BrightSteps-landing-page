@@ -1,13 +1,14 @@
+/* Trusted Container - Clean Responsive Version */
 .trusted-container {
-  margin-top: 0px;
   text-align: center;
-  padding: 0px 0px;
+  padding: 20px 0;
   background-color: #fff;
 }
 
 .trusted-heading {
-  margin: 40px 0 20px;
+  margin: 40px 0 30px;
   font-size: 24px;
+  color: #333;
 }
 
 .trusted-heading span {
@@ -15,123 +16,119 @@
   font-weight: bold;
 }
 
-/* Logo section */
+/* Logo Marquee - Simple and Effective */
 .logos {
   overflow: hidden;
+  white-space: nowrap;
   position: relative;
-  height: 150px;
-  margin-bottom: 30px;
+  height: 100px;
+  margin: 30px 0;
 }
 
-/* Inner wrapper that scrolls the logos */
 .logos-inner {
-  display: flex;
-  gap: 30px;
+  display: inline-block;
   animation: scroll-logos 20s linear infinite;
+  padding-right: 40px; /* Creates gap between looping items */
 }
 
 .logos-inner img {
-  height: 150px;
-  max-width: 200px;
+  height: 60px;
+  width: auto;
+  margin: 0 30px;
   object-fit: contain;
+  vertical-align: middle;
 }
 
-/* Animation to move logos left to right */
 @keyframes scroll-logos {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-60%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-
-/* Stats grid */
+/* Stats Grid - Clean Responsive Layout */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  justify-items: center;
-  align-items: center;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
 .stat-card {
-  background-color: #fef6f9;
+  background: #fef6f9;
   border-radius: 10px;
-  padding: 20px 10px;
-  width: 100%;
-  max-width: 220px;
-  height: 130px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
 .stat-card img {
   width: 50px;
-  height: auto;
-  margin-bottom: 10px;
+  height: 50px;
+  margin-bottom: 15px;
 }
 
 .stat-card h3 {
   font-size: 18px;
-  margin: 0;
-  font-weight: bold;
+  margin: 0 0 5px;
+  color: #333;
 }
 
 .stat-card p {
-  margin: 5px 0 0;
   font-size: 14px;
-  color: #555;
+  color: #666;
+  margin: 0;
 }
 
 .stat-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-
-
-
-@media (max-width: 992px) {
-  .stat-card {
-    max-width: 200px;
-  }
-}
-
-@media (max-width: 768px) {
+/* Responsive Adjustments */
+@media (max-width: 900px) {
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    max-width: 600px;
   }
-
+  
   .logos-inner img {
-    height: 70px;
-    max-width: none;
+    height: 50px;
+    margin: 0 20px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+  .trusted-heading {
+    font-size: 22px;
+    margin: 30px 0 20px;
+  }
+  
   .stats-grid {
     grid-template-columns: 1fr;
+    max-width: 300px;
   }
+  
+  .logos {
+    height: 80px;
+  }
+  
+  .logos-inner img {
+    height: 40px;
+    margin: 0 15px;
+  }
+}
 
+@media (max-width: 400px) {
   .trusted-heading {
     font-size: 20px;
   }
-
-  .stat-card h3 {
-    font-size: 16px;
-  }
-
-  .stat-card p {
-    font-size: 13px;
-  }
-
+  
   .logos-inner img {
-    height: 60px;
+    height: 35px;
+    margin: 0 10px;
+  }
+  
+  .stat-card {
+    padding: 15px;
   }
 }

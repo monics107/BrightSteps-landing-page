@@ -13,7 +13,7 @@ const MiddleSection = () => {
         </h2>
         <div className="section-content">
           <img
-            src="/whats.png"
+            src={`${import.meta.env.BASE_URL}whats.png`}
             alt="WhatsApp"
             className="section-image"
           />
@@ -29,7 +29,7 @@ const MiddleSection = () => {
         </div>
       </section>
  {/* Personalized Support */}
-<section className="support-section">
+{/* <section className="support-section">
   <h3 className="highlight-title">Personalized Support</h3>
   <h4>1-on-1 Support</h4>
   <div className="section-content"> 
@@ -40,12 +40,12 @@ const MiddleSection = () => {
       </p>
     </div>
     <img
-      src="/support.png"
+      src={`${import.meta.env.BASE_URL}support.png`}
       alt="Support Woman"
       className="section-image"
-    />
+    />npm ru
   </div>
-</section>
+</section> */}
       {/* We Provide Everything You Need */}
       <section className="provide-section">
         <h2 className="main-title">We Provide</h2>
@@ -58,7 +58,7 @@ const MiddleSection = () => {
             </p>
           </div>
           <img
-            src="/clip.png"
+            src={`${import.meta.env.BASE_URL}clip.png`}
             alt="Clock Management"
             className="section-image"
           />

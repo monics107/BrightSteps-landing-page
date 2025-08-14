@@ -25,7 +25,7 @@ const BrightStepsSection = ({setShowLogin}) => {
         </div>
 
         <div className="bright-image">
-          <img src="/success_story.png" alt=" "/>
+          <img src={`${import.meta.env.BASE_URL}success_story.png`} alt=" "/>
         </div>
       </div>
     </div>

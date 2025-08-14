@@ -1,23 +1,24 @@
+/* Base Mobile Styles (0px+) */
 .middle-wrapper {
-  padding: 60px 20px;
+  padding: 40px 15px;
   font-family: 'Segoe UI', sans-serif;
   color: #2d2d2d;
   background-color: #fefefe;
-  width: 80%;
+  width: 100%;
   margin: auto;
 }
 
 .small-title {
   text-align: center;
   color: #2e0056;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
   margin-bottom: 5px;
 }
 
 .main-title {
   color: #9900ff;
-  font-size: 28px;
+  font-size: 22px;
   margin: 10px 0;
   line-height: 1.4;
   text-align: center;
@@ -30,38 +31,34 @@
 
 .section-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 40px;
+  gap: 30px;
   margin-top: 30px;
-  flex-wrap: wrap;
-}
-
-.reverse {
-  flex-direction: row-reverse;
 }
 
 .section-image {
-  width: 300px;
+  width: 100%;
+  max-width: 350px;
   border-radius: 15px;
 }
 
 .section-text {
-  text-align: left;
-  min-width: 300px;
-  max-width: 600px;
-  padding-bottom: 50px;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 30px;
 }
 
 .section-text h3 {
-  font-size: 20px;
-  margin-bottom: 0px;
+  font-size: 18px;
+  margin-bottom: 10px;
   color: #333;
 }
 
 .section-text p {
   line-height: 1.6;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 15px;
 }
 
 .explore-btn {
@@ -73,96 +70,171 @@
   border-radius: 25px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+.explore-btn:hover {
+  background: #6a3fc1;
+  transform: translateY(-2px);
+}
+
+.store-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
 }
 
 .store-buttons img {
-  height: 40px;
+  height: 35px;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .store-buttons img:hover {
   transform: scale(1.1) translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-} 
+}
 
 h4 {
-  font-size: 18px;
+  font-size: 16px;
   color: #333;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .highlight-title {
-  margin-top: 40px;
+  margin-top: 30px;
   text-align: center;
+  font-size: 20px;
 }
 
-.store-buttons img:focus {
-  outline: none;
-  transform: scale(1.1) translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-}
-
-
-
-@media (max-width: 992px) {
-  .section-content {
-    flex-direction: column;
-    text-align: center;
+/* Small Tablets (600px+) */
+@media (min-width: 600px) {
+  .middle-wrapper {
+    padding: 50px 25px;
   }
-
-  .section-text {
-    text-align: center;
-    padding-bottom: 30px;
+  
+  .small-title {
+    font-size: 20px;
   }
-
-  .section-image {
-    width: 80%;
-    max-width: 350px;
-  }
-
+  
   .main-title {
+    font-size: 26px;
+  }
+  
+  .section-image {
+    max-width: 400px;
+  }
+}
+
+/* Large Tablets (768px+) */
+@media (min-width: 768px) {
+  .middle-wrapper {
+    width: 90%;
+    padding: 60px 30px;
+  }
+  
+  .section-content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    gap: 40px;
+  }
+  
+  .section-text {
+    text-align: left;
+    width: calc(50% - 20px);
+    padding-bottom: 40px;
+  }
+  
+  .section-image {
+    width: calc(50% - 20px);
+    max-width: 450px;
+  }
+  
+  .reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .store-buttons {
+    justify-content: flex-start;
+  }
+  
+  .store-buttons img {
+    height: 40px;
+  }
+}
+
+/* Laptops (992px+) */
+@media (min-width: 992px) {
+  .middle-wrapper {
+    width: 85%;
+    max-width: 1200px;
+    padding: 70px 40px;
+  }
+  
+  .small-title {
+    font-size: 22px;
+  }
+  
+  .main-title {
+    font-size: 28px;
+  }
+  
+  .section-text h3 {
+    font-size: 20px;
+  }
+  
+  .highlight-title {
     font-size: 24px;
   }
-
-  .small-title {
-    font-size: 20px;
-  }
-
-  .section-text h3 {
+  
+  h4 {
     font-size: 18px;
-  }
-
-  .section-text p {
-    font-size: 14px;
   }
 }
 
-@media (max-width: 576px) {
-  .main-title {
-    font-size: 20px;
+/* Large Desktops (1200px+) */
+@media (min-width: 1200px) {
+  .middle-wrapper {
+    padding: 80px 50px;
   }
-
-  .small-title {
-    font-size: 18px;
-  }
-
-  .section-image {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .explore-btn {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-
-  h4 {
-    font-size: 16px;
-  }
-
+  
   .section-content {
+    gap: 60px;
+  }
+  
+  .section-text {
+    max-width: 600px;
+  }
+  
+  .section-image {
+    max-width: 500px;
+  }
+  
+  .store-buttons img {
+    height: 45px;
+  }
+}
+
+/* Special Cases */
+/* Landscape Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .middle-wrapper {
+    padding: 30px 20px;
+  }
+  
+  .section-content {
+    flex-direction: row;
     gap: 20px;
+  }
+  
+  .section-image {
+    width: 40%;
+  }
+  
+  .section-text {
+    width: 60%;
+    padding-bottom: 20px;
   }
 }

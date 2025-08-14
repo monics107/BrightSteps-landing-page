@@ -7,7 +7,7 @@ const ClientTestimonials = () => {
       <p className="live-text">Watch !</p>
       <h3 className="experience-text">To Have Live Experience</h3>
       
-      <iframe
+      <iframe class="player"
   width="560"
   height="315"
   src="https://www.youtube.com/embed/u-Wi4zbQ7TA"
@@ -27,7 +27,7 @@ const ClientTestimonials = () => {
         {/* Card 1 */}
         <div className="testimonial-card">
           <div className="card-header">
-            <img src="/anjali.png" alt="Mrs. Anjali" className="profile-pic" />
+            <img src={`${import.meta.env.BASE_URL}anjali.png`} alt=" "/>
             <div>
               <p className="name">Mrs. Anjali</p>
               <p className="role">Parent, Karnataka</p>
@@ -42,7 +42,7 @@ const ClientTestimonials = () => {
         {/* Card 2 */}
         <div className="testimonial-card">
           <div className="card-header">
-            <img src="/bindu.png" alt="Bindu" className="profile-pic" />
+            <img src={`${import.meta.env.BASE_URL}bindu.png`} alt=" "/>
             <div>
               <p className="name">Bindu Madewi</p>
               <p className="role">School Leader</p>
@@ -57,7 +57,7 @@ const ClientTestimonials = () => {
         {/* Card 3 */}
         <div className="testimonial-card">
           <div className="card-header">
-            <img src="/pravas.png" alt="Dr. Pravalika" className="profile-pic" />
+            <img src={`${import.meta.env.BASE_URL}pravas.png`} alt=" "/>
             <div>
               <p className="name">DR. Pravalika Sree</p>
               <p className="role">Teacher and Head of Institute</p>
