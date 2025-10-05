@@ -1,5 +1,4 @@
 .product-app-section {
-  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,11 +8,15 @@
   border-radius: 20px;
   position: relative;
   overflow: hidden;
-  margin-left: 0%;
-  margin-right: 0%;
   min-height: 300px;
   flex-wrap: wrap;
+
+  /* MAIN FIX */
+  width: 90%;          /* leave 5% space both sides */
+  max-width: 1350px;   /* don’t stretch too much */
+  margin: 40px auto;   /* center on page */
 }
+
 
 .des {
   color: #e0e6ed;

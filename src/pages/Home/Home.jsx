@@ -33,9 +33,7 @@ const Home = ({ setShowLogin }) => {
         <PricingPlans setShowLogin={setShowLogin} /> {/* Pass here */}
       </div>
       <DemoForm />
-      <div id="footer">
-        <Footer />
-      </div>
+      
     </div>
   );
 };

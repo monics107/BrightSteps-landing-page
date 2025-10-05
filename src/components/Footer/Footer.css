@@ -1,3 +1,10 @@
+/* Reset body & html default spacing */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Footer styles */
 .footer {
   background-color: #141321;
   color: white;
@@ -8,6 +15,13 @@
   font-family: Arial, sans-serif;
   border-top: 2px solid #ccc;
   gap: 20px;
+}
+
+/* Remove default p and ul margin */
+.footer p,
+.footer ul {
+  margin: 0;
+  padding: 0;
 }
 
 .footer-section {
@@ -25,7 +39,6 @@
 
 .footer-section ul {
   list-style-type: none;
-  padding-left: 0;
 }
 
 .footer-section ul li {
@@ -55,7 +68,6 @@
 /* ----------------------------
    Responsive Styling
 -----------------------------*/
-
 @media (max-width: 768px) {
   .footer {
     flex-direction: column;

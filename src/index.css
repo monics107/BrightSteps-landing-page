@@ -1,29 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-*{
-  padding:0 ;
+/* Reset everything */
+* {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: inter;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
   scroll-behavior: smooth;
 }
-body{
-  min-height: 100vh;
+
+/* Layout to push footer down */
+body {
+  display: flex;
+  flex-direction: column;
 }
 
-a{
-  text-decoration: none;
-  color: inherit;
-}
-.app{
-  width:100vw;
-  margin: 25px;;
-}
-@keyframes fadeIn {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }

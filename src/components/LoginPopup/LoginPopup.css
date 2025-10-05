@@ -9,6 +9,72 @@
   --bg: #FFFFFF;
 }
 
+/* Glass effect for background only */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: rgba(255, 255, 255, 0.1); /* semi-transparent glass */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  padding: 1rem;
+}
+
+.popup-overlay.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Keep your popup normal, NO blur inside */
+.login-popup {
+  background: #ffffff; /* solid white or your original background */
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  color: var(--text);
+  width: 100%;
+  max-width: 400px;
+  padding: 1.5rem;
+  position: relative;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.3s ease;
+  margin: 0.5rem;
+}
+
+.login-popup.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.login-popup {
+  position: relative;
+  background-color: var(--bg); /* solid background */
+  border-radius: 15px; /* rounded corners */
+  padding: 1.5rem;
+  max-width: 400px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden; /* keeps border radius intact */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.3s ease;
+  margin: 0.5rem;
+}
+
+
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -50,15 +116,18 @@
 
 .close-btn {
   position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
+  top: 1rem;      /* distance from top */
+  right: 1rem;    /* distance from right */
   background: none;
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
   color: var(--text-light);
-  padding: 0.25rem;
+  z-index: 10;    /* ensure it stays above popup content */
+  padding: 0;
 }
+
+
 
 .popup-header {
   text-align: center;
@@ -309,5 +378,34 @@
   .login-popup {
     margin-top: 1rem;
     margin-bottom: 1rem;
+  }
+} 
+.close-btn {
+  position: absolute;
+  top: 1rem;      /* distance from top */
+  right: 1rem;    /* distance from right */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-light);
+  z-index: 10;    /* ensure it stays above popup content */
+  padding: 0;
+}
+
+/* Optional: make close button slightly bigger on small screens */
+@media (max-width: 480px) {
+  .close-btn {
+    top: 0.75rem;
+    right: 0.75rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .close-btn {
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.3rem;
   }
 }

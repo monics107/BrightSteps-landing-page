@@ -3,8 +3,14 @@
   padding: 40px 20px;
   background: linear-gradient(to right, #f8e4f8, #ffe9d3);
   font-family: Arial, sans-serif;
-  width: 100%;
+
+  /* FIX */
+  width: 90%;          /* leave space on both sides */
+  max-width: 1350px;   /* don’t stretch too much on big monitors */
+  margin: 40px auto;   /* center the section */
+  border-radius: 15px; /* optional – makes background look neat */
 }
+
 
 .heading {
   font-size: 22px;
@@ -111,6 +117,15 @@
     max-width: 90%;
   }
 }
+
+@media (max-width: 576px) {
+  .pricing-container {
+    width: 95%;
+    margin: 20px auto;
+    padding: 30px 15px;
+  }
+}
+
 
 @media (max-width: 480px) {
   .heading {

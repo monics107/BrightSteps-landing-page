@@ -4,10 +4,15 @@
   color: #ffffff;
   text-align: center;
   border-radius: 10px;
-  max-width: 1350px;
-  margin: 40px auto;
-  height: max-content;
+
+  /* MAIN FIX */
+  width: 90%;          /* leave 5% space left + right */
+  max-width: 1350px;   /* don’t stretch more than 1350px */
+  margin: 40px auto;   /* center content */
+  
+  box-sizing: border-box;
 }
+
 
 .heading-main {
   color: #fdc5bd;

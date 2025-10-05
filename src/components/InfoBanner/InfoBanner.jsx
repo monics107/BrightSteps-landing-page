@@ -8,8 +8,7 @@ const InfoBanner = () => {
       <div className="banner-left">
         <h3 className="banner-title">
           <span>Bright Academy</span><br />
-          <strong>Talent Management Systems<br />
-          built for school</strong>
+          <strong>Talent Management Systems<br />built for school</strong>
         </h3>
         <p className="banner-text">
           Built a smarter organization with the training platform designed to help great teams grow.
@@ -18,12 +17,14 @@ const InfoBanner = () => {
 
       {/* Right Section */}
       <div className="banner-right">
-          <div className="card-images">
-            <img src={`${import.meta.env.BASE_URL}infobanner.png`} alt=" " />
-          </div>
+        <div className="bright-image">
+          <img 
+            src={`${import.meta.env.BASE_URL}infobanner.png`} 
+            alt="Bright Academy Banner"
+          />
         </div>
       </div>
-   
+    </div>
   );
 };
 

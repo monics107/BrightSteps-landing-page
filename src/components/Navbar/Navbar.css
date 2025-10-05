@@ -8,6 +8,7 @@
   background: white;
   position: sticky;
   top: 0;
+  left: 0;
   z-index: 100;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
@@ -70,7 +71,7 @@
 .mobile-menu-toggle {
   background: none;
   border: none;
-  font-size: 1.8rem;
+  font-size: 1rem;
   cursor: pointer;
   color: #333;
   display: none;
